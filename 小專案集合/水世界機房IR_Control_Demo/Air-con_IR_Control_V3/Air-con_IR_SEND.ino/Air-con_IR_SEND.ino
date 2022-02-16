@@ -113,6 +113,7 @@ void IR_SEND(){
   lcd.clear();
   lcd.setCursor(0,0);  lcd.print(_Brand_);
   lcd.setCursor(0,1);  lcd.print("IR: Sending...");
+  Serial.println("Sending IR");
   irsend.sendRaw(rawCodes_ac_open,140, 38);
   delay(5);
 }
